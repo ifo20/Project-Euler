@@ -2,7 +2,7 @@ namespace Euler
 {
     using System;
 
-    public class Problem2 : IProblems
+    public class Problem2 : IProblem
     {
         public void Pose()
         {

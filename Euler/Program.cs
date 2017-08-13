@@ -14,20 +14,20 @@
             {
                 bool success = false;
                 int id = 0;
-                string n = string.Empty;
+                string input = string.Empty;
                 while (!success)
                 {
                     Console.WriteLine("Which Project Euler problem would you like to see? Enter the number only, or q to quit");
 
-                    n = Console.ReadLine();
-                    if (n == "q")
+                    input = Console.ReadLine();
+                    if (input == "q")
                     {
                         Environment.Exit(0);
                     }
 
                     try
                     {
-                        id = int.Parse(n);
+                        id = int.Parse(input);
                         success = true;
                     }
                     catch
@@ -36,10 +36,10 @@
                     }
                 }
 
-                IProblems problem = new Problem1();
+                IProblem problem = new Problem1();
                 try
                 {
-                    problem = (IProblems)CreateSpecificInstance("Problem" + id.ToString());
+                    problem = (IProblem)CreateSpecificInstance("Problem" + id.ToString());
                 }
                 catch
                 {
@@ -50,15 +50,15 @@
                 problem.Pose();
 
                 Console.WriteLine("Press y to see solution, q to quit, or any other key to see another problem");
-                n = Console.ReadLine();
+                input = Console.ReadLine();
 
-                if (n == "q")
+                if (input == "q")
                 {
                     Environment.Exit(1);
                 }
 
                 string result;
-                if (n == "y")
+                if (input == "y")
                 {
                     result = problem.Solve();
                     Console.WriteLine("Answer: " + result);
