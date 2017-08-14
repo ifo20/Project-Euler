@@ -60,6 +60,7 @@
                 string result;
                 if (input == "y")
                 {
+                    Console.WriteLine("Solving...");
                     result = problem.Solve();
                     Console.WriteLine("Answer: " + result);
                 }
