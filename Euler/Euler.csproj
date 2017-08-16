@@ -7,12 +7,14 @@
 
   <ItemGroup>
     <None Remove="Resources\pe018-tri.txt" />
+    <None Remove="Resources\pe022-names.txt" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Resources\pe018-tri.txt">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\pe022-names.txt" />
   </ItemGroup>
 
   <ItemGroup>

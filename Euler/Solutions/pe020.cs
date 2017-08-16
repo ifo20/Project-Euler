@@ -1,7 +1,6 @@
 ﻿namespace Euler
 {
     using System;
-    using System.IO;
 
     public class Problem20 : IProblem
     {
