@@ -2,7 +2,6 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.IO;
 
     public class Problem24 : IProblem
     {
@@ -76,10 +75,12 @@ What is the millionth lexicographic permutation of the digits 0, 1, 2, 3, 4, 5, 
                         {
                             digits[9 - x]++;
                         }
+
                         for (int i = 0; i < 10; i++)
                         {
                             Console.Write(digits[i].ToString());
                         }
+
                         Console.WriteLine("");
 
                         if (n <= Factorial(x))
@@ -95,6 +96,7 @@ What is the millionth lexicographic permutation of the digits 0, 1, 2, 3, 4, 5, 
                     {
                         digits[9 - x]++;
                     }
+
                     used_digits.Add(digits[9 - x]);
                 }
             }
